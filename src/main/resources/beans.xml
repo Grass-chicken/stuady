@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="out_car" class="test03.Parking_out"/>
+    <bean id="in_car" class="test03.Parking_in"/>
+    <bean id="user_use" class="run.User_use">
+        <property name="parking" ref="out_car"/>
+    </bean>
+
+
+
+</beans>
