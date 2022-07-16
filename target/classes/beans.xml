@@ -4,14 +4,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id="hi" class="test01.spring_hi">
-    <property name="str" value="world"/>
-</bean>
     <bean id="out_car" class="test03.Parking_out"/>
     <bean id="in_car" class="test03.Parking_in"/>
     <bean id="user_use" class="run.User_use">
         <property name="parking" ref="out_car"/>
     </bean>
+
 
 
 </beans>

@@ -9,7 +9,7 @@ import test03.Parking_out;
 
 public class user {
     public static void main(String[] args) {
-       ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
       User user= (User) context.getBean("user_use");
       user.out();
     }

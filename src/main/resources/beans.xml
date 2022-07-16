@@ -3,11 +3,20 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-    <bean id="out_car" class="test03.Parking_out"/>
+    <import resource="beans2.xml"/>
+    <bean id="out_car" class="test03.Parking_out" name="o_t_1"/>
     <bean id="in_car" class="test03.Parking_in"/>
+    <alias name="out_car" alias="o_t_2"/>
+
     <bean id="user_use" class="run.User_use">
         <property name="parking" ref="out_car"/>
+         <constructor-arg name="user_name" value="张三"/> <!--通过参数名对构造函数赋值-->
+        <!--
+        <constructor-arg type="java.lang.String" value="李四"/><!-通过类型对构造函数赋值->
+        <constructor-arg index="0" value="王五"/><!-通过下标对构造函数赋值->
+         -->
+
+
     </bean>
 
 
